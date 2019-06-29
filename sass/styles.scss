@@ -1,0 +1,145 @@
+// BREAKPOINTS
+$breakpoints: (small: 568px, medium: 768px, large: 1024px, xlarge: 1280px, xxlarge: 1440px);
+
+/*Mise en forme basique texte*/
+body{
+    padding: 0px 0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+}
+ul{
+    list-style-type: none;
+    li{
+        text-decoration: none;
+    }
+}
+a{
+    text-decoration: none;
+}
+
+/*Conteneurs*/
+.section{
+    width: 100%;
+    height: 100vh;
+}
+
+.content-container{
+    width: 1280px;
+    margin: 0 auto;
+}
+#pageContainer{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; /* So the width will be 100% + 17px */
+}
+#navContainer{
+    position: fixed;
+    background-color: black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 62px;
+    box-shadow: 0 30px 60px rgba(0,0,0,75);
+    #mobileNav{
+        display:none;
+        li{
+            margin: 0px 3%;
+        }
+    }
+    #desktopNav{
+        display: block;
+    }
+    @media (max-width: 1024px) {
+        #desktopNav{
+            display: none;
+        }
+        #mobileNav{
+            display: block;
+        }
+    }
+    .bandLogo{
+        opacity: 1;
+    }
+    ul{
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        margin: 10px 0px;
+        font-size: 14px;
+        padding-left: 0px;
+        li:hover, li:active, li:focus{
+            opacity: 1;
+            transition: 0.5s ease-in-out;
+        }
+        li{
+            display: inline;
+            margin: 0px 24px;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-weight: 300;
+            opacity: 0.2;
+            transition: 0.5s ease-in-out;
+            a, p{
+                color: #ffffff;
+            }
+            img{
+                width: 180px;
+                vertical-align: middle;
+            }
+            i{
+                color: #ffffff;
+                width: 32px;
+                height: 32px;
+                font-size: 20px;
+                margin: 0px 8px;
+                vertical-align: -webkit-baseline-middle;
+            }
+        }
+        li:first-child:before{
+            content: '';
+        }
+    }
+}
+
+#section1{
+    iframe{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+p{
+    width: 100%;
+    text-align: center;
+}
+
+.section{
+    width: calc(100% + 17px);
+}
+
+.preloader-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+}
+
+.preloader-wrapper .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 120px;
+}
+
+
+
